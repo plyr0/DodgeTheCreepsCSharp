@@ -21,6 +21,7 @@ public class HUD : CanvasLayer
 		GetNode<Label>("MessageLabel").Show();
 		await ToSignal(GetTree().CreateTimer(1f), "timeout");
 		GetNode<Button>("Button").Show();
+		GetNode<Button>("Button").GrabFocus();
 	}
 
 	public void On_Button_pressed()

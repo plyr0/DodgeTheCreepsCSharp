@@ -36,7 +36,11 @@ public class Main : Node
 		GetNode<HUD>("HUD").ShowGameOver();
 	}
 
-	public override void _Ready() => GD.Randomize();
+	public override void _Ready()
+	{
+		GD.Randomize();
+		GetNode<Button>("HUD/Button").GrabFocus();
+	}
 
 	public override void _Process(float delta){}
 
